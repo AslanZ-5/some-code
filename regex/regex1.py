@@ -15,6 +15,9 @@ print(str(bool(re.search(Regex_Pattern, input()))).lower())
 # 5 Matching Word Boundaries
 Regex_Pattern = r'\b[aeiouAEIOU]?[A-Za-z]+\b'
 print(str(bool(re.search(Regex_Pattern, input()))).lower())
-#6 Matching Specific Characters
+# 6 Matching Specific Characters
 Regex_Pattern = r'^[1-3][120][xs0][30Aa][xsu][\.|,]$'
+print(str(bool(re.search(Regex_Pattern, input()))).lower())
+# 7 Excluding Specific Characters
+Regex_Pattern = r'^[^0-9][^aeiou][^bcdDF][^\s][^AEIOU][^/.|,]$'
 print(str(bool(re.search(Regex_Pattern, input()))).lower())
