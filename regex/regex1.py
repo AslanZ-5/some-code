@@ -21,3 +21,6 @@ print(str(bool(re.search(Regex_Pattern, input()))).lower())
 # 7 Excluding Specific Characters
 Regex_Pattern = r'^[^0-9][^aeiou][^bcdDF][^\s][^AEIOU][^/.|,]$'
 print(str(bool(re.search(Regex_Pattern, input()))).lower())
+# 8 Matching Character Ranges
+Regex_Pattern = r'^[a-z][1-9][^a-z][^A-Z][A-Z]+'
+print(str(bool(re.search(Regex_Pattern, input()))).lower())
