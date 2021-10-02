@@ -24,3 +24,6 @@ print(str(bool(re.search(Regex_Pattern, input()))).lower())
 # 8 Matching Character Ranges
 Regex_Pattern = r'^[a-z][1-9][^a-z][^A-Z][A-Z]+'
 print(str(bool(re.search(Regex_Pattern, input()))).lower())
+# 9 Matching {x} Repetitions
+Regex_Pattern = r'[A-Za-z24680]{40}[13579|\s]{5}$'
+print(str(bool(re.search(Regex_Pattern, input()))).lower())
