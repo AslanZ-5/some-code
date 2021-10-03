@@ -27,3 +27,6 @@ print(str(bool(re.search(Regex_Pattern, input()))).lower())
 # 9 Matching {x} Repetitions
 Regex_Pattern = r'[A-Za-z24680]{40}[13579|\s]{5}$'
 print(str(bool(re.search(Regex_Pattern, input()))).lower())
+# 10 Matching {x, y} Repetitions
+Regex_Pattern = r'^[\d]{1,2}[A-Za-z]{3,}[/.]{0,3}$'
+print(str(bool(re.search(Regex_Pattern, input()))).lower())
