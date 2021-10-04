@@ -12,13 +12,21 @@
 # Separate columns with " | ", and lines with "\n"; content should be left-justified.
 
 
-a = {"1", "12", "123", "1234", "12345", "123456"}
-list = list(sorted(a))
-
-
-print([list[i::3] for i in range(3)])
-
+# a = {"1", "12", "123", "1234", "12345", "123456"}
+# list = list(sorted(a))
+#
+#
+# print([list[i::3] for i in range(3)])
 
 # print(math.ceil(7/3))
+
+
+#(?<=[/\.])[\w]+(?=\.)  (?<=\.)([^.]+)(?:\.(?:co\.uk|ac\.us|[^.]+(?:$|\n)))
+import re
+a = 'http://google.co.jp'
+
+c = re.compile(r'(?<=[/\.])[\w]+(?=\.)')
+print(c.search(a))
+
 
 
