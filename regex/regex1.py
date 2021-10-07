@@ -22,3 +22,5 @@ Regex_Pattern9 = r'[A-Za-z24680]{40}[13579|\s]{5}$'
 Regex_Pattern10 = r'^[\d]{1,2}[A-Za-z]{3,}[/.]{0,3}$'
 # 11 Matching Zero Or More Repetitions
 Regex_Pattern11 = r'^[\d]{2,}[a-z]*[A-Z]*$'
+# 12 Matching One Or More Repetitions
+Regex_Pattern12 = r'^\d+[A-Z]+[a-z]+$'
