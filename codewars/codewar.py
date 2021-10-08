@@ -51,3 +51,4 @@
 # #             print(j,i)
 # #         if i == len(a) - 1 and a[len(a) - 1][j] == '.':
 # #             print(j,i)
+
