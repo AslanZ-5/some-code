@@ -24,3 +24,5 @@ Regex_Pattern10 = r'^[\d]{1,2}[A-Za-z]{3,}[/.]{0,3}$'
 Regex_Pattern11 = r'^[\d]{2,}[a-z]*[A-Z]*$'
 # 12 Matching One Or More Repetitions
 Regex_Pattern12 = r'^\d+[A-Z]+[a-z]+$'
+# 13 Matching Ending Items
+Regex_Pattern13 = r'^[A-Za-z]*s$'
