@@ -1,4 +1,7 @@
-# import re
+import re
+from itertools import product, permutations, combinations
+import math
+
 # c = 'big brown fox cought a bad rabbit'
 # positive = 0
 # negative = 0
@@ -19,9 +22,10 @@
 # tr = re.compile(r'^[a-m]').findall(i.lower())
 # print(tr)
 
-from itertools import product, permutations, combinations
 
 count = 0
+
+
 def fib(n):
     if n == 1:
         return 1
@@ -31,5 +35,18 @@ def fib(n):
     count += n
     return fib(n - 1) + fib(n - 2)
 
-print(count)
-print(fib(5))
+
+def permutation(string):
+    return sorted({''.join(i) for i in permutations(string)})
+
+
+# print(permutation('a'))
+
+def is_square(a):
+    return all(list(map(lambda x: math.sqrt(x) == int(math.sqrt(x)), a)))
+
+
+def letter_only(c):
+    a = re.compile(r'[A-Za-z\s]+')
+    d = a.findall(c)
+    print(''.join(d))
