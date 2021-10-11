@@ -50,3 +50,17 @@ def letter_only(c):
     a = re.compile(r'[A-Za-z\s]+')
     d = a.findall(c)
     print(''.join(d))
+
+
+def even_or_odd(s):
+    odd = sum([int(i) for i in s if int(i) % 2])
+    even = sum([int(i) for i in s if int(i) % 2 == 0])
+    if odd > even:
+        return 'Odd is greater than Even'
+    if even > odd:
+        return 'Even is greater than Odd'
+    if even == odd:
+        return 'Even and Odd are the same'
+
+
+print(even_or_odd('12'))
