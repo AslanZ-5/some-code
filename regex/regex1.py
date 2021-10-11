@@ -26,3 +26,5 @@ Regex_Pattern11 = r'^[\d]{2,}[a-z]*[A-Z]*$'
 Regex_Pattern12 = r'^\d+[A-Z]+[a-z]+$'
 # 13 Matching Ending Items
 Regex_Pattern13 = r'^[A-Za-z]*s$'
+# 14 Capturing & Non-Capturing Groups ( S should have 3 or more consecutive repetitions of ok)
+Regex_Pattern14 = r'(ok){3,}'
