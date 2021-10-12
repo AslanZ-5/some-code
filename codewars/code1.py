@@ -63,4 +63,9 @@ def even_or_odd(s):
         return 'Even and Odd are the same'
 
 
-print(even_or_odd('12'))
+def alphanumeric(password):
+    a = re.compile(r'^[A-Za-z0-9]+$')
+    if a.findall(password):
+        return True
+    else:
+        return False
