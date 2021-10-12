@@ -69,3 +69,13 @@ def alphanumeric(password):
         return True
     else:
         return False
+
+
+def is_nice(arr):
+    if arr:
+        a = [ i for i in arr if i+1 in arr or i-1 in arr ]
+        if len(a) == len(arr):
+            return True
+        else:
+            return False
+    return False
