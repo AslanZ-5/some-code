@@ -28,3 +28,5 @@ Regex_Pattern12 = r'^\d+[A-Z]+[a-z]+$'
 Regex_Pattern13 = r'^[A-Za-z]*s$'
 # 14 Capturing & Non-Capturing Groups ( S should have 3 or more consecutive repetitions of ok)
 Regex_Pattern14 = r'(ok){3,}'
+#15 Alternative Matching
+Regex_Pattern15 = r'^(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[A-Za-z]+$'
