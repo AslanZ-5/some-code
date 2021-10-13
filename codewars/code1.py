@@ -1,6 +1,7 @@
 import re
 from itertools import product, permutations, combinations
 import math
+from collections import Counter
 
 # c = 'big brown fox cought a bad rabbit'
 # positive = 0
@@ -73,9 +74,34 @@ def alphanumeric(password):
 
 def is_nice(arr):
     if arr:
-        a = [ i for i in arr if i+1 in arr or i-1 in arr ]
+        a = [i for i in arr if i + 1 in arr or i - 1 in arr]
         if len(a) == len(arr):
             return True
         else:
             return False
     return False
+
+
+class Calculator(object):
+    def evaluate(self, string):
+        return int(eval(string))
+
+
+s1 = re.compile(r'[a-z]+').findall("A aaaa bb c")
+s2 = re.compile(r'[a-z]+').findall("& aaa bbb c d")
+l1 = list(''.join(s1))
+l2 = list(''.join(s2))
+s1c = Counter(l1)
+s2c = Counter(l2)
+d = s1c + s2c
+print(d)
+print(s1c)
+print(s2c)
+x = []
+for i in d:
+    if s1c[i] > 1 and s2c[i] >1:
+        if s1c[i] < s2c[i]:
+            x.append(f'2:{i} {s2c[i]}')
+        elif  s1c[i] > s2c[i]:
+            x.append(f'1:{i} {s1c[i]}')
+print(x)
