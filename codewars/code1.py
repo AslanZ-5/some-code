@@ -87,21 +87,31 @@ class Calculator(object):
         return int(eval(string))
 
 
-s1 = re.compile(r'[a-z]+').findall("A aaaa bb c")
-s2 = re.compile(r'[a-z]+').findall("& aaa bbb c d")
-l1 = list(''.join(s1))
-l2 = list(''.join(s2))
-s1c = Counter(l1)
-s2c = Counter(l2)
-d = s1c + s2c
-print(d)
-print(s1c)
-print(s2c)
-x = []
-for i in d:
-    if s1c[i] > 1 and s2c[i] >1:
-        if s1c[i] < s2c[i]:
-            x.append(f'2:{i} {s2c[i]}')
-        elif  s1c[i] > s2c[i]:
-            x.append(f'1:{i} {s1c[i]}')
-print(x)
+# s1 = re.compile(r'[a-z]+').findall("A aaaa bb c")
+# s2 = re.compile(r'[a-z]+').findall("& aaa bbb c d")
+# l1 = list(''.join(s1))
+# l2 = list(''.join(s2))
+# s1c = Counter(l1)
+# s2c = Counter(l2)
+# d = s1c + s2c
+# print(d)
+# print(s1c)
+# print(s2c)
+# x = []
+# for i in d:
+#     if s1c[i] > 1 and s2c[i] >1:
+#         if s1c[i] < s2c[i]:
+#             x.append(f'2:{i} {s2c[i]}')
+#         elif  s1c[i] > s2c[i]:
+#             x.append(f'1:{i} {s1c[i]}')
+# print(x)
+def f(s):
+    if len(s) > 1:
+        return str(s)[1:] + str(s)[0] + 'ay'
+    if len(s) == 1 and s.isalpha():
+        return s + 'ay'
+    return s
+
+
+def pig_it(text):
+    return ' '.join(list(map(f, text.split())))
