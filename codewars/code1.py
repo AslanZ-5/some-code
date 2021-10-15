@@ -115,3 +115,7 @@ def f(s):
 
 def pig_it(text):
     return ' '.join(list(map(f, text.split())))
+
+
+def digitize(n):
+    return list(reversed([int(i) for i in str(n)]))
