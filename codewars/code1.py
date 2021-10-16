@@ -119,3 +119,16 @@ def pig_it(text):
 
 def digitize(n):
     return list(reversed([int(i) for i in str(n)]))
+
+
+
+
+
+
+def is_same_language(lst):
+    return [i['language'] for i in lst].count(lst[0]['language']) == len(lst)
+list1 = [
+  { 'firstName': 'Daniel', 'lastName': 'J.', 'country': 'Aruba', 'continent': 'Americas', 'age': 42, 'language': 'JavaScript' },
+  { 'firstName': 'Kseniya', 'lastName': 'T.', 'country': 'Belarus', 'continent': 'Europe', 'age': 22, 'language': 'JavaScript' },
+  { 'firstName': 'Hanna', 'lastName': 'L.', 'country': 'Hungary', 'continent': 'Europe', 'age': 65, 'language': 'JavaScript' },
+]
