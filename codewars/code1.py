@@ -121,14 +121,28 @@ def digitize(n):
     return list(reversed([int(i) for i in str(n)]))
 
 
-
-
-
-
 def is_same_language(lst):
     return [i['language'] for i in lst].count(lst[0]['language']) == len(lst)
+
+
 list1 = [
-  { 'firstName': 'Daniel', 'lastName': 'J.', 'country': 'Aruba', 'continent': 'Americas', 'age': 42, 'language': 'JavaScript' },
-  { 'firstName': 'Kseniya', 'lastName': 'T.', 'country': 'Belarus', 'continent': 'Europe', 'age': 22, 'language': 'JavaScript' },
-  { 'firstName': 'Hanna', 'lastName': 'L.', 'country': 'Hungary', 'continent': 'Europe', 'age': 65, 'language': 'JavaScript' },
+    {'firstName': 'Daniel', 'lastName': 'J.', 'country': 'Aruba', 'continent': 'Americas', 'age': 42,
+     'language': 'JavaScript'},
+    {'firstName': 'Kseniya', 'lastName': 'T.', 'country': 'Belarus', 'continent': 'Europe', 'age': 22,
+     'language': 'JavaScript'},
+    {'firstName': 'Hanna', 'lastName': 'L.', 'country': 'Hungary', 'continent': 'Europe', 'age': 65,
+     'language': 'JavaScript'},
 ]
+
+#
+st = ' FIREYYFURYYFURYYFURRYFIRE'
+t = re.compile(r'(FIRE|FURY)')
+l = t.findall(st)
+c = ''
+for i in set(l):
+    if i == 'FIRE':
+        c+= f'You {"and you " * (l.count("FIRE")-1)}are fired!'
+    if i == 'FURY':
+        c+= f'I am {"really " * (l.count("FURY")-1)}furious.'
+
+print(c)
