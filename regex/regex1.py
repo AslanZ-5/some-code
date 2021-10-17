@@ -32,3 +32,5 @@ Regex_Pattern14 = r'(ok){3,}'
 Regex_Pattern15 = r'^(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[A-Za-z]+$'
 # 16 Matching Same Text Again & Again by "/group_number"
 Regex_Pattern16 = r'([a-z]\w\s\W\d\D[A-Z][A-Za-z][aeiouAEIOU]\S)\1'
+# 17 Backreferences To Failed Groups
+Regex_Pattern17 = r"^(\d{8})$|^(\d\d-\d\d-\d\d-\d\d)$"
