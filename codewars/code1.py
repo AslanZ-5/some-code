@@ -134,15 +134,27 @@ list1 = [
      'language': 'JavaScript'},
 ]
 
-#
-st = ' FIREYYFURYYFURYYFURRYFIRE'
-t = re.compile(r'(FIRE|FURY)')
-l = t.findall(st)
-c = ''
-for i in set(l):
-    if i == 'FIRE':
-        c+= f'You {"and you " * (l.count("FIRE")-1)}are fired!'
-    if i == 'FURY':
-        c+= f'I am {"really " * (l.count("FURY")-1)}furious.'
 
-print(c)
+#
+# st = ' FIREYYFURYYFURYYFURRYFIRE'
+# t = re.compile(r'(FIRE|FURY)')
+# l = t.findall(st)
+# c = ''
+# for i in set(l):
+#     if i == 'FIRE':
+#         c+= f'You {"and you " * (l.count("FIRE")-1)}are fired!'
+#     if i == 'FURY':
+#         c+= f'I am {"really " * (l.count("FURY")-1)}furious.'
+
+def determine_time(arr):
+    t = 0
+    for i in arr:
+        h = int(i[:2])
+        m = int(i[3:5])
+        s = int(i[6:])
+        t += h
+        t += m / 60
+        t += (s / 60) / 60
+    if t > 24:
+        return False
+    return True
