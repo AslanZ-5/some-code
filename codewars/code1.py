@@ -158,3 +158,14 @@ def determine_time(arr):
     if t > 24:
         return False
     return True
+
+
+def nth_char(words):
+    a = ''
+    for i in range(len(words)):
+        a += words[i][i]
+
+    return a
+
+
+# print(nth_char(['Chad','Morocco','India','Algeria','Botswana','Bahamas','Ecuador','Micronesia']))
