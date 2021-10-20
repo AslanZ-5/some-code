@@ -23,9 +23,10 @@ class PlayerCharacter:
 
     def run(self):
         print('run')
-p1 = PlayerCharacter('aslan')
-print(p1.name)
-p1.run()
+# p1 = PlayerCharacter('aslan')
+# print(p1.name)
+# p1.run()
+
 
 
 
