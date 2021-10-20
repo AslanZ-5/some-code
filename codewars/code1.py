@@ -169,3 +169,9 @@ def nth_char(words):
 
 
 # print(nth_char(['Chad','Morocco','India','Algeria','Botswana','Bahamas','Ecuador','Micronesia']))
+
+def abbrev_name(name):
+    c = name.split()
+    return '{}.{}'.format(c[0][0].upper(),c[1][0].upper())
+
+
