@@ -10,5 +10,5 @@ class Nameofclass():
         return cls(param1,param2)
     @staticmethod
     def stc_methd(param1,param2):
-        pass 
+        pass
 
