@@ -175,3 +175,32 @@ def abbrev_name(name):
     return '{}.{}'.format(c[0][0].upper(),c[1][0].upper())
 
 
+def zeros(n):
+    r = list(reversed(str(math.factorial(32))))
+    index = 0
+    for i in range(len(r)):
+        if r[i] != '0':
+            index = i
+            break
+    return len(r[:index])
+
+a = 'the quick broWn fox leapt over the fence'
+c = 9
+b = list("{0:b}".format(c))
+t = b
+x = ''
+for i in a:
+    print(t)
+    if i.isalpha() and t[0] == '1':
+        x += i.swapcase()
+        t.pop(0)
+    elif i.isalpha() and t[0] == '0':
+        t.pop(0)
+        if bool(t) == False:
+            t = b
+    elif i == ' ':
+        x +=i
+
+print(x)
+
+
