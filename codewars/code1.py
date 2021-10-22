@@ -211,3 +211,15 @@ def binarray(s) -> int:
         return 0
     return binarray(s[1:-1])
 print(binarray([0,0,1,1,1,0,0,0,0,0]))
+
+
+def duplicate_encode(word):
+    c = ''
+    word = word.lower()
+    for i in word:
+        if word.count(i) > 1:
+            c += ')'
+        else:
+            c += '('
+    print(c)
+duplicate_encode("(( @")
