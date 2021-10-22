@@ -27,7 +27,18 @@ class PlayerCharacter:
 # print(p1.name)
 # p1.run()
 
+class FirstClass:
+    def setdata(self,value):
+        self.data = value
+    def display(self):
+        print(self.data)
 
 
+x = FirstClass()
+y = FirstClass()
+x.setdata('Artur')
+y.setdata(2312)
 
+for i in x,y:
+    i.display()
 
