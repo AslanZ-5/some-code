@@ -184,23 +184,30 @@ def zeros(n):
             break
     return len(r[:index])
 
-a = 'the quick broWn fox leapt over the fence'
-c = 9
-b = list("{0:b}".format(c))
-t = b
-x = ''
-for i in a:
-    print(t)
-    if i.isalpha() and t[0] == '1':
-        x += i.swapcase()
-        t.pop(0)
-    elif i.isalpha() and t[0] == '0':
-        t.pop(0)
-        if bool(t) == False:
-            t = b
-    elif i == ' ':
-        x +=i
+# a = 'the quick broWn fox leapt over the fence'
+# c = 9
+# b = list("{0:b}".format(c))
+# t = b
+# x = ''
+# for i in a:
+#     print(t)
+#     if i.isalpha() and t[0] == '1':
+#         x += i.swapcase()
+#         t.pop(0)
+#     elif i.isalpha() and t[0] == '0':
+#         t.pop(0)
+#         if bool(t) == False:
+#             t = b
+#     elif i == ' ':
+#         x +=i
+#
+# print(x)
 
-print(x)
 
-
+def binarray(s) -> int:
+    if s.count(1) == s.count(0):
+        return len(s)
+    elif len(s) == 1 or len(s) == 0:
+        return 0
+    return binarray(s[1:-1])
+print(binarray([0,0,1,1,1,0,0,0,0,0]))
