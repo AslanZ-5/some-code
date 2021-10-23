@@ -27,7 +27,7 @@ class PlayerCharacter:
 # print(p1.name)
 # p1.run()
 
-class FirstClass:
+class FirstClass(C1):
     def setdata(self,value):
         self.data = value
     def display(self):
