@@ -223,3 +223,6 @@ def duplicate_encode(word):
             c += '('
     print(c)
 duplicate_encode("(( @")
+
+def reverse_list(l):
+  return list(reversed(l))
