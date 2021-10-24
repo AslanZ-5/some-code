@@ -210,7 +210,7 @@ def binarray(s) -> int:
     elif len(s) == 1 or len(s) == 0:
         return 0
     return binarray(s[1:-1])
-print(binarray([0,0,1,1,1,0,0,0,0,0]))
+# print(binarray([0,0,1,1,1,0,0,0,0,0]))
 
 
 def duplicate_encode(word):
@@ -222,7 +222,19 @@ def duplicate_encode(word):
         else:
             c += '('
     print(c)
-duplicate_encode("(( @")
+# duplicate_encode("(( @")
 
 def reverse_list(l):
   return list(reversed(l))
+
+
+def rental_car_cost(d):
+    cost = 40
+    total = cost * d
+    if d>=7:
+        total -= 50
+    if d>=3 and d<7:
+        total -= 20
+    return total
+
+print(rental_car_cost(4))
