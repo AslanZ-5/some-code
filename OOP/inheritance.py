@@ -25,8 +25,10 @@ class Archer(User):
     def attack(self):
         print(f'atacking with arrows: arrows left - {self.num_arrows}')
 
-w = Warrior('postter',33,'dd@mail.ru')
-a = Archer('adlan',12)
-print(w.email)
+
+if __name__ == '__main__':
+    w = Warrior('postter',33,'dd@mail.ru')
+    a = Archer('adlan',12)
+    print(w.email)
 
 

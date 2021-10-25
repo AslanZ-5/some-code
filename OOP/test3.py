@@ -17,18 +17,18 @@ class ThirdClass(FirstClass):  # Inherit from SecondClass
 
 
 class SuperList(list):
-    def __init__(self,l):
+    def __init__(self, l):
         self.l = list(l)
 
     def __len__(self):
         return len(self.l)
 
-
-    def append(self,item):
+    def append(self, item):
         return self.l.append(item)
 
 
-l1= SuperList([1,23,4,5,6])
-l1.append(3333)
-print(l1.l)
-print(len(l1))
+if __name__ == '__main__':
+    l1 = SuperList([1, 23, 4, 5, 6])
+    l1.append(3333)
+    print(l1.l)
+    print(len(l1))
