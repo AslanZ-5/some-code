@@ -237,4 +237,5 @@ def rental_car_cost(d):
         total -= 20
     return total
 
-print(rental_car_cost(4))
+def reverseseq(n):
+    return list(range(n, 0, -1))
