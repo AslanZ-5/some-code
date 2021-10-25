@@ -36,9 +36,5 @@ class FirstClass(C1):
 
 x = FirstClass()
 y = FirstClass()
-x.setdata('Artur')
-y.setdata(2312)
 
-for i in x,y:
-    i.display()
 
