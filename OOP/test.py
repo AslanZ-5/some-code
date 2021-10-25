@@ -33,8 +33,8 @@ class FirstClass(C1):
     def display(self):
         print(self.data)
 
-
-x = FirstClass()
-y = FirstClass()
+if __name__ == '__main__':
+    x = FirstClass()
+    y = FirstClass()
 
 

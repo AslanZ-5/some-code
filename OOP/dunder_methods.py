@@ -18,6 +18,7 @@ class Toy():
     def __getitem__(self, item):
         return self.my_dict[item]
 
-a = Toy('red',32)
 
-print(a['name'])
+if __name__ == '__main__':
+    a = Toy('red',32)
+    print(a['name'])
