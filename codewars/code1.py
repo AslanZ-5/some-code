@@ -239,3 +239,19 @@ def rental_car_cost(d):
 
 def reverseseq(n):
     return list(range(n, 0, -1))
+
+
+def balanced_num(n):
+    n = [ int(i) for i in str(n)]
+    if len(str(n)) < 3:
+        return 'Balanced'
+    elif len(n)%2 ==0:
+        if sum(n[:len(n)//2-1]) == sum(n[len(n)//2+1:]):
+            return 'Balanced'
+        else:
+            return "Not Balanced"
+    elif len(n)%2 != 0:
+        if sum(n[:len(n)//2]) == sum(n[len(n)//2+1:]):
+            return 'Balanced'
+        else:
+            return "Not Balanced"
