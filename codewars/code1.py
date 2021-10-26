@@ -277,3 +277,6 @@ def comp(array1, array2):
         return len({i ** 2 for i in array1}.intersection(array2)) == len(set(array2))
     except:
         return False
+
+a = 32532
+print(a - int(a*.10))
