@@ -29,7 +29,7 @@ class Rom(User,Warrior,Archer):
         Warrior.__init__(self,name,power)
         Archer.__init__(self,name,num_arrows)
         User.__init__(self,email)
-    
+
 
 
 
