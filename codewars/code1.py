@@ -172,7 +172,7 @@ def nth_char(words):
 
 def abbrev_name(name):
     c = name.split()
-    return '{}.{}'.format(c[0][0].upper(),c[1][0].upper())
+    return '{}.{}'.format(c[0][0].upper(), c[1][0].upper())
 
 
 def zeros(n):
@@ -183,6 +183,7 @@ def zeros(n):
             index = i
             break
     return len(r[:index])
+
 
 # a = 'the quick broWn fox leapt over the fence'
 # c = 9
@@ -210,6 +211,8 @@ def binarray(s) -> int:
     elif len(s) == 1 or len(s) == 0:
         return 0
     return binarray(s[1:-1])
+
+
 # print(binarray([0,0,1,1,1,0,0,0,0,0]))
 
 
@@ -222,39 +225,43 @@ def duplicate_encode(word):
         else:
             c += '('
     print(c)
+
+
 # duplicate_encode("(( @")
 
 def reverse_list(l):
-  return list(reversed(l))
+    return list(reversed(l))
 
 
 def rental_car_cost(d):
     cost = 40
     total = cost * d
-    if d>=7:
+    if d >= 7:
         total -= 50
-    if d>=3 and d<7:
+    if d >= 3 and d < 7:
         total -= 20
     return total
+
 
 def reverseseq(n):
     return list(range(n, 0, -1))
 
 
 def balanced_num(n):
-    n = [ int(i) for i in str(n)]
+    n = [int(i) for i in str(n)]
     if len(str(n)) < 3:
         return 'Balanced'
-    elif len(n)%2 ==0:
-        if sum(n[:len(n)//2-1]) == sum(n[len(n)//2+1:]):
+    elif len(n) % 2 == 0:
+        if sum(n[:len(n) // 2 - 1]) == sum(n[len(n) // 2 + 1:]):
             return 'Balanced'
         else:
             return "Not Balanced"
-    elif len(n)%2 != 0:
-        if sum(n[:len(n)//2]) == sum(n[len(n)//2+1:]):
+    elif len(n) % 2 != 0:
+        if sum(n[:len(n) // 2]) == sum(n[len(n) // 2 + 1:]):
             return 'Balanced'
         else:
             return "Not Balanced"
+
 
 def update_light(current):
     if current == "green":
@@ -263,3 +270,10 @@ def update_light(current):
         return 'red'
     elif current == "red":
         return 'green'
+
+# are they the same
+def comp(array1, array2):
+    try:
+        return len({i ** 2 for i in array1}.intersection(array2)) == len(set(array2))
+    except:
+        return False
