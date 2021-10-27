@@ -281,3 +281,18 @@ def comp(array1, array2):
 def find_short(s):
     l = min([len(i) for i in s.split()])
     return l
+
+def create_phone_number(n):
+    a = ''.join(map(str,n))
+    a = list(a)
+
+    a.insert(0,'(')
+    a.insert(4,')')
+    a.insert(5,' ')
+    a.insert(9,'-')
+
+    return ''.join(a)
+
+
+
+
