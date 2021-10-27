@@ -278,5 +278,6 @@ def comp(array1, array2):
     except:
         return False
 
-a = 32532
-print(a - int(a*.10))
+def find_short(s):
+    l = min([len(i) for i in s.split()])
+    return l
