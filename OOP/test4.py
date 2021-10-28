@@ -18,4 +18,4 @@ class Manager(Person):
     def giveRaise(self, percent, bonus=.10):  # Redefine at this level
         Person.giveRaise(self, percent + bonus)
 
-if __name__ == '__main__':
+
