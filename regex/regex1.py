@@ -34,3 +34,5 @@ Regex_Pattern15 = r'^(Mr\.|Mrs\.|Ms\.|Dr\.|Er\.)[A-Za-z]+$'
 Regex_Pattern16 = r'([a-z]\w\s\W\d\D[A-Z][A-Za-z][aeiouAEIOU]\S)\1'
 # 17 Backreferences To Failed Groups
 Regex_Pattern17 = r"^(\d{8})$|^(\d\d-\d\d-\d\d-\d\d)$"
+#18 Positive Lookahead
+Regex_Pattern18 = r'o(?=oo)'
