@@ -36,3 +36,5 @@ Regex_Pattern16 = r'([a-z]\w\s\W\d\D[A-Z][A-Za-z][aeiouAEIOU]\S)\1'
 Regex_Pattern17 = r"^(\d{8})$|^(\d\d-\d\d-\d\d-\d\d)$"
 #18 Positive Lookahead
 Regex_Pattern18 = r'o(?=oo)'
+#19 Negative Lookahead
+Regex_Pattern19 = r"(.)(?!\1)"
