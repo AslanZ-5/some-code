@@ -1,31 +1,4 @@
-# def encrypt_this(text):
-#     c = []
-#     for i in text.split():
-#
-#         if len(i) == 1:
-#             c.append(str(ord(i)))
-#         elif len(i) == 2:
-#             c.append(str(ord(i[0])) + i[-1])
-#         else:
-#             c.append(str(ord(i[0])) +i[-1] + i[2:-1] + i[1])
-#     return ' '.join(c)
-#
-# print(encrypt_this("A wise old owl lived in an oak"))
 
-a = [1,2,3,4,5,6]
-
-x = int((len(a)-1)/2)
-if len(a) %2 != 0:
-    b = a[:x]
-b = a[:x+1]
-c = a[x+ 1:]
-c.reverse()
-print(b)
-print(c)
-c = [b[i] + c[i] for i in range(len(b))]
-if len(a) %2 != 0:
-    c.append(a[x])
-print(c)
 
 def fold_array(array, runs):
     for i in range(runs):
@@ -40,4 +13,13 @@ def fold_array(array, runs):
             array.append(array[x])
         return array
 
-print(fold_array([1,2,3,4,5,6],2))
+
+
+def digital_root(n):
+    x = True
+    while x:
+        n = sum(list(map(int,str(n))))
+        if len(str(n)) == 1:
+            x = False
+
+    return n
