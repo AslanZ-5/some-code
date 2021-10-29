@@ -15,22 +15,42 @@ class Person:
 
 
 class Manager:
-    def __init__(self,name,pay):
-        self.person = Person(name,'mgr',pay)
-    def giveRaise(self,percent,bonus=.10):
+    def __init__(self, name, pay):
+        self.person = Person(name, 'mgr', pay)
+
+    def giveRaise(self, percent, bonus=.10):
         self.person.giveRaise(percent + bonus)
 
     def __getattr__(self, attr):
-        return getattr(self.person,attr)
+        return getattr(self.person, attr)
 
     def __repr__(self):
         return str(self.person)
 
-if __name__ == "__main__":
-    bob = Person('bob Smith',pay=10000)
-    print(bob.name)
-    tom = Manager('Ton Jones',54324)
-    print(tom)
 
+class Department:
+    def __init__(self, *args):
+        self.members = list(args)
+
+    def addMember(self, person):
+        self.members.append(person)
+
+    def giveRaises(self, percent):
+        for person in self.members:
+            person.giveRaise(percent)
+
+    def showAll(self):
+        for person in self.members:
+            print(person)
+
+
+if __name__ == "__main__":
+    bob = Person('bob Smith', pay=10000)
+    sue = Person('Sue Jones', pay=10000)
+    tom = Manager('Ton Jones', 54324)
+    dev = Department(bob,sue)
+    print(bob.__class__)
+    print(bob.__dict__.keys())
+    print(tom.__dict__.keys())
 
 
