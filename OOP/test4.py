@@ -14,8 +14,23 @@ class Person:
         return '[Person: %s, %s]' % (self.name, self.pay)
 
 
-class Manager(Person):
-    def giveRaise(self, percent, bonus=.10):  # Redefine at this level
-        Person.giveRaise(self, percent + bonus)
+class Manager:
+    def __init__(self,name,pay):
+        self.person = Person(name,'mgr',pay)
+    def giveRaise(self,percent,bonus=.10):
+        self.person.giveRaise(percent + bonus)
+
+    def __getattr__(self, attr):
+        return getattr(self.person,attr)
+
+    def __repr__(self):
+        return str(self.person)
+
+if __name__ == "__main__":
+    bob = Person('bob Smith',pay=10000)
+    print(bob.name)
+    tom = Manager('Ton Jones',54324)
+    print(tom)
+
 
 
