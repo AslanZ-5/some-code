@@ -30,5 +30,6 @@ class SuperList(list):
 if __name__ == '__main__':
     l1 = SuperList([1, 23, 4, 5, 6])
     l1.append(3333)
-    print(l1.l)
-    print(len(l1))
+    d = ThirdClass(32)
+
+
