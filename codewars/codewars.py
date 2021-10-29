@@ -1,4 +1,5 @@
-
+import string
+import math
 
 def fold_array(array, runs):
     for i in range(runs):
@@ -36,3 +37,8 @@ def solve(st):
         else:
             c.append(False)
     return all(c)
+
+
+def array_plus(array1,array2):
+    return sum(array1 + array2)
+
