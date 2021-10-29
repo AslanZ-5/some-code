@@ -42,3 +42,14 @@ def solve(st):
 def array_plus(array1,array2):
     return sum(array1 + array2)
 
+
+
+r = [1, 512, 4913, 5832, 17576, 19683]
+
+for i in r:
+    print(round(i**(1./3.)) != sum(map(int,str(i))))
+    if round(i**(1./3.)) != sum(map(int,str(i))):
+        r.remove(i)
+print(r)
+
+
