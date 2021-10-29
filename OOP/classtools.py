@@ -30,4 +30,5 @@ if __name__ == '__main__':
         pass
     X,Y = TopTest(),SubTest()
     print(X)
-    print(Y)
+    print(Y.__dir__())
+    print(Y.__dict__)
