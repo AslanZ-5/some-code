@@ -15,5 +15,12 @@ def number(lines):
 def isequal(a, b):
     return all([True if type(a[i]) == type(b[i]) else False for i in range(len(a))])
 
+
 def greet(name):
     return f"Hello, {name} how are you doing today?"
+
+
+
+def solve(s):
+    a = re.compile(r'[aiueo]+')
+    return max(map(len,a.findall(s)))
