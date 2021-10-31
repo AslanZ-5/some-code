@@ -7,5 +7,13 @@ def count_smileys(arr):
     c = a.findall(arr)
     return len(c)
 
+
 def number(lines):
-    return [f'{i+1}: {lines[i]}' for i in range(0,len(lines))]
+    return [f'{i + 1}: {lines[i]}' for i in range(0, len(lines))]
+
+
+def isequal(a, b):
+    return all([True if type(a[i]) == type(b[i]) else False for i in range(len(a))])
+
+def greet(name):
+    return f"Hello, {name} how are you doing today?"
