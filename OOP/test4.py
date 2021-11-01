@@ -1,4 +1,7 @@
-class Person:
+from classtools import AttrDisplay
+
+
+class Person(AttrDisplay):
     def __init__(self, name, job=None, pay=0):
         self.name = name
         self.job = job
@@ -10,13 +13,13 @@ class Person:
     def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
-    def __repr__(self):
-        return '[Person: %s, %s]' % (self.name, self.pay)
+    # def __repr__(self):
+    #     return '[Person: %s, %s]' % (self.name, self.pay)
 
 
-class Manager:
+class Manager(Person):
     def __init__(self, name, pay):
-        self.person = Person(name, 'mgr', pay)
+        Person.__init__(self,name,'mgr',pay)
 
     def giveRaise(self, percent, bonus=.10):
         self.person.giveRaise(percent + bonus)
@@ -46,11 +49,10 @@ class Department:
 
 if __name__ == "__main__":
     bob = Person('bob Smith', pay=10000)
-    sue = Person('Sue Jones', pay=10000)
-    tom = Manager('Ton Jones', 54324)
-    dev = Department(bob,sue)
-    print(bob.__class__)
-    print(bob.__dict__.keys())
-    print(tom.__dict__.keys())
-
-
+    sue = Person('Sue Jones', job='dev', pay=10000)
+    # tom = Manager('Ton Jones', 54324)
+    dev = Department(bob, sue)
+    sue.giveRaise(.10)
+    print(bob)
+    print(sue)
+    # print(tom.__dict__.keys())
