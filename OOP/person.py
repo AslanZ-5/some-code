@@ -1,4 +1,6 @@
-class Person:
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
     def __init__(self, name, job=None, pay=0):
         self.name = name
         self.job = job
