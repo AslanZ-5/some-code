@@ -27,8 +27,8 @@ class Manager(Person):
     def __getattr__(self, attr):
         return getattr(self.person, attr)
 
-    def __repr__(self):
-        return str(self.person)
+    # def __repr__(self):
+    #     return str(self.person)
 
 
 class Department:
