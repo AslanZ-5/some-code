@@ -24,3 +24,12 @@ def greet(name):
 def solve(s):
     a = re.compile(r'[aiueo]+')
     return max(map(len,a.findall(s)))
+
+
+def solve(s):
+    b = [1 if i.islower() else 0 for i in s]
+    if sum(b) >= len(s)//2:
+        return s.lower()
+    else:
+        return s.upper()
+
