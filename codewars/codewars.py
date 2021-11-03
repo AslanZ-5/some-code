@@ -57,3 +57,7 @@ def solve(s):
     c = re.compile('[auieo]')
     s = c.split(s)
     return max([sum(map(lambda x: string.ascii_lowercase.index(x) + 1, i)) for i in s if i])
+
+
+def spin_words(sentence):
+    return ' '.join([ i[::-1] if len(i) >= 5 else i for i in sentence.split() ])
