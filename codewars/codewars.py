@@ -61,3 +61,7 @@ def solve(s):
 
 def spin_words(sentence):
     return ' '.join([ i[::-1] if len(i) >= 5 else i for i in sentence.split() ])
+
+
+def filter_string(string):
+    return int(''.join([i for i in string if i.isnumeric()]))
