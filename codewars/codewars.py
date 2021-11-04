@@ -65,3 +65,7 @@ def spin_words(sentence):
 
 def filter_string(string):
     return int(''.join([i for i in string if i.isnumeric()]))
+
+a = '1349876562bsdbcjksdc bsjdc11231231sc nsdj cs,c n'
+c = re.compile(r'(?<=[13579])\d')
+print(c.findall(a))
