@@ -38,3 +38,5 @@ Regex_Pattern17 = r"^(\d{8})$|^(\d\d-\d\d-\d\d-\d\d)$"
 Regex_Pattern18 = r'o(?=oo)'
 #19 Negative Lookahead
 Regex_Pattern19 = r"(.)(?!\1)"
+# Positive Lookbehind
+Regex_Pattern20 = r"(?<=[13579])\d"
