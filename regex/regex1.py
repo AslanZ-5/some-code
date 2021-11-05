@@ -40,3 +40,5 @@ Regex_Pattern18 = r'o(?=oo)'
 Regex_Pattern19 = r"(.)(?!\1)"
 # Positive Lookbehind
 Regex_Pattern20 = r"(?<=[13579])\d"
+# Negative Lookbehind
+Regex_Pattern21 = r"(?<![aeiuoAEIOU])."
