@@ -1,4 +1,5 @@
 import re
+import functools
 
 
 def count_smileys(arr):
@@ -49,3 +50,14 @@ def run_length_encoding2(s):
     from itertools import groupby
     return [[len(list(b)),i] for i,b in groupby(s)]
 
+
+
+
+def persistence(n):
+    count = 0
+    while len(str(n)) != 1:
+        count += 1
+        c = list(map(int, str(n)))
+        n = functools.reduce(lambda a, b: a * b, c)
+
+    return count
