@@ -61,3 +61,7 @@ def persistence(n):
         n = functools.reduce(lambda a, b: a * b, c)
 
     return count
+
+
+def count_nines(n):
+    return ''.join(list(map(str,range(1,n+1)))).count('9')
