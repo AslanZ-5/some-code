@@ -1,5 +1,6 @@
 import re
 import functools
+from collections import deque
 
 
 def count_smileys(arr):
@@ -33,24 +34,23 @@ def solve(s):
     else:
         return s.upper()
 
+
 def run_length_encoding(s):
     if s:
         x = []
         x.append(s[0])
-        for i in range(1,len(s)):
-            if s[i] == s[i-1]:
+        for i in range(1, len(s)):
+            if s[i] == s[i - 1]:
                 x[-1] += s[i]
             else:
                 x.append(s[i])
-        return [[len(i),i[0]] for i in x]
+        return [[len(i), i[0]] for i in x]
     return []
 
 
 def run_length_encoding2(s):
     from itertools import groupby
-    return [[len(list(b)),i] for i,b in groupby(s)]
-
-
+    return [[len(list(b)), i] for i, b in groupby(s)]
 
 
 def persistence(n):
@@ -64,4 +64,34 @@ def persistence(n):
 
 
 def count_nines(n):
-    return ''.join(list(map(str,range(1,n+1)))).count('9')
+    return ''.join(list(map(str, range(1, n + 1)))).count('9')
+
+
+# dir = 'cc'
+# c = deque()
+# for i in a:
+#     i.reverse()
+# a.reverse()
+# print(a)
+
+#
+r =  [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+t = [list(reversed(i)) for i in zip(*r)]
+print(t)
+
+
+a = [[7, 4, 1],
+     [8, 5, 2],
+     [9, 6, 3]]
+
+
+def rotate(matrix, direction):
+    if direction == "counter-clockwise":
+        a = [list(i) for i in zip(*matrix)]
+        a.reverse()
+        return a
+    if direction == "clockwise":
+        return [list(reversed(i)) for i in zip(*r)]
+
