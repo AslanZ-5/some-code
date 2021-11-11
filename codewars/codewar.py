@@ -1,6 +1,7 @@
 import re
 import functools
 from collections import deque
+from num2words import num2words
 
 
 def count_smileys(arr):
@@ -75,12 +76,11 @@ def count_nines(n):
 # print(a)
 
 #
-r =  [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
+r = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
 t = [list(reversed(i)) for i in zip(*r)]
 print(t)
-
 
 a = [[7, 4, 1],
      [8, 5, 2],
@@ -94,4 +94,10 @@ def rotate(matrix, direction):
         return a
     if direction == "clockwise":
         return [list(reversed(i)) for i in zip(*r)]
+
+def numbers(*args):
+    a = list(args)
+    c= [ True if  isinstance(i,(int,float)) else False  for i in a  ]
+    return all(c)
+print(numbers())
 
