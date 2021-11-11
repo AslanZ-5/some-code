@@ -69,3 +69,7 @@ def filter_string(string):
 a = '1349876562bsdbcjksdc bsjdc11231231sc nsdj cs,c n'
 c = re.compile(r'(?<=[13579])\d')
 print(c.findall(a))
+
+
+
+
