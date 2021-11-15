@@ -60,16 +60,31 @@ def solve(s):
 
 
 def spin_words(sentence):
-    return ' '.join([ i[::-1] if len(i) >= 5 else i for i in sentence.split() ])
+    return ' '.join([i[::-1] if len(i) >= 5 else i for i in sentence.split()])
 
 
 def filter_string(string):
     return int(''.join([i for i in string if i.isnumeric()]))
 
+
 a = '1349876562bsdbcjksdc bsjdc11231231sc nsdj cs,c n'
 c = re.compile(r'(?<=[13579])\d')
-print(c.findall(a))
+# print(c.findall(a))
 
 
-
-
+def binarysearch(tar, lst):
+    lst = list(sorted(lst))
+    print(lst)
+    l = 0
+    h = len(lst) - 1
+    while l <= h:
+        mid = (l + h) // 2
+        if tar == lst[mid]:
+            print('tar', lst[mid])
+            return True
+        elif tar < lst[mid]:
+            h = mid -1
+        elif tar > lst[mid]:
+            l = mid + 1
+    return False
+# print(binarysearch(9,[1,2,3,4,5,6,7]))
