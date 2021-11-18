@@ -71,7 +71,7 @@ a = '1349876562bsdbcjksdc bsjdc11231231sc nsdj cs,c n'
 c = re.compile(r'(?<=[13579])\d')
 
 
-# print(c.findall(a))
+
 
 
 def binarysearch(tar, lst):
@@ -91,7 +91,7 @@ def binarysearch(tar, lst):
     return False
 
 
-# print(binarysearch(9,[1,2,3,4,5,6,7]))
+
 def binary_s_rec(lst, tar, l, h):
     if l > h:
         return False
@@ -105,6 +105,3 @@ def binary_s_rec(lst, tar, l, h):
             return binary_s_rec(lst,tar,l,mid-1)
         elif tar > lst[mid]:
             return binary_s_rec(lst,tar,mid+1,h)
-lst = [1,2,3,4,5,6,7]
-h = len(lst) -1
-print(binary_s_rec(lst,3,0,h))
