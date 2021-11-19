@@ -1,6 +1,6 @@
 import re
 import string
-import math
+
 
 
 def fold_array(array, runs):
@@ -44,15 +44,6 @@ def array_plus(array1, array2):
     return sum(array1 + array2)
 
 
-# r = [1, 512, 4913, 5832, 17576, 19683]
-#
-# for i in r:
-#     print(round(i ** (1. / 3.)) != sum(map(int, str(i))))
-#     if round(i ** (1. / 3.)) != sum(map(int, str(i))):
-#         r.remove(i)
-# print(r)
-
-# Consonant value
 def solve(s):
     c = re.compile('[auieo]')
     s = c.split(s)
