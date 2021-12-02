@@ -2,7 +2,6 @@ import re
 import string
 
 
-
 def fold_array(array, runs):
     for i in range(runs):
         x = int((len(array) - 1) / 2)
@@ -62,37 +61,35 @@ a = '1349876562bsdbcjksdc bsjdc11231231sc nsdj cs,c n'
 c = re.compile(r'(?<=[13579])\d')
 
 
-
-
-
-def binarysearch(tar, lst):
-    lst = list(sorted(lst))
-    print(lst)
+def benary_search(lst, tar):
     l = 0
     h = len(lst) - 1
     while l <= h:
         mid = (l + h) // 2
-        if tar == lst[mid]:
-            print('tar', lst[mid])
+        if lst[mid] == tar:
+            print(tar)
             return True
-        elif tar < lst[mid]:
-            h = mid - 1
-        elif tar > lst[mid]:
-            l = mid + 1
+        elif lst[mid] < tar:
+            l = mid +1
+        else:
+            h = mid -1
     return False
 
-
-
-def binary_s_rec(lst, tar, l, h):
+def benary_search_rec(lst,tar,l,h):
     if l > h:
         return False
-
     else:
-        mid = (l + h) // 2
-        if tar == lst[mid]:
-            print(f'rec tar {lst[mid]}')
+        mid = (l + h) //2
+        if lst[mid] == tar:
+            print(tar)
             return True
         elif tar < lst[mid]:
-            return binary_s_rec(lst,tar,l,mid-1)
-        elif tar > lst[mid]:
-            return binary_s_rec(lst,tar,mid+1,h)
+            return benary_search_rec(lst,tar,l,mid-1)
+        else:
+            return benary_search_rec(lst,tar,mid+1, h)
+
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 8]
+print(benary_search([1, 2, 3, 4, 5, 6, 7, 8], 5))
+print(benary_search_rec(a, 5,l=0,h=len(a)-1))
