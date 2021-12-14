@@ -89,7 +89,9 @@ def benary_search_rec(lst,tar,l,h):
             return benary_search_rec(lst,tar,mid+1, h)
 
 
-
-a = [1, 2, 3, 4, 5, 6, 7, 8]
-print(benary_search([1, 2, 3, 4, 5, 6, 7, 8], 5))
-print(benary_search_rec(a, 5,l=0,h=len(a)-1))
+def move_zeros(r):
+    for i in r:
+        if i == 0:
+            r.remove(i)
+            r.append(i)
+    return r
