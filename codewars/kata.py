@@ -35,5 +35,17 @@ def closest_num(arr, tar):
         else:
             return arr[mid]
     return closest
-a = [2, 6, 7, 8, 8, 9]
-print(closest_num(a,4))
+
+
+# print(closest_num([2, 6, 7, 8, 8, 9], 4))
+
+def peak(arr):
+    pos = []
+    peaks = []
+    for i in range(len(arr)):
+        if i - 1 > 0 and i + 1 < len(arr):
+            if arr[i - 1] < arr[i] and arr[i + 1] < arr[i]:
+                pos.append(i)
+                peaks.append(arr[i])
+    return {'pos': pos, 'peaks': peaks}
+print(peak([3,2,3,6,4,1,2,3,2,1,2,2,2,1]))
