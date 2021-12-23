@@ -38,7 +38,10 @@ def closest_num(arr, tar):
 
 
 # print(closest_num([2, 6, 7, 8, 8, 9], 4))
+import timeit
 
+
+start = timeit.timeit()
 def peak(arr):
     pos = []
     peaks = []
@@ -48,4 +51,39 @@ def peak(arr):
                 pos.append(i)
                 peaks.append(arr[i])
     return {'pos': pos, 'peaks': peaks}
-print(peak([3,2,3,6,4,1,2,3,2,1,2,2,2,1]))
+# print(peak([3,2,3,6,4,1,2,3,2,1,2,2,2,1]))
+
+stop = timeit.timeit()
+# print('time: ',start - stop)
+
+
+
+str_int = "apples, pears # and bananas\ngrapes\nbananas !apples"
+# str_int = "a #b\nc\nd $e f g"
+mark = ["#", "!"]
+# mark = ["#", "$"]
+def solution(string,markers):
+    t = []
+    ls = string.split('\n')
+
+    for i in ls:
+        inx = []
+        for j in markers:
+            if j in i:
+                inx.append(i.index(j))
+
+        if inx:
+            t.append(i[:min(inx)])
+        else:
+            t.append(i)
+    return '\n'.join(map(str.rstrip,t))
+print(solution(str_int,mark))
+
+# print(list(ls[1]).index('#'))
+# for i in ls:
+#     for j in mark:
+#         if i.index(j):
+#             t.append(i[:i.index(j)])
+
+
+
