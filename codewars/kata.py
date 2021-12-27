@@ -77,7 +77,7 @@ def solution(string,markers):
         else:
             t.append(i)
     return '\n'.join(map(str.rstrip,t))
-print(solution(str_int,mark))
+# print(solution(str_int,mark))
 
 # print(list(ls[1]).index('#'))
 # for i in ls:
@@ -86,4 +86,14 @@ print(solution(str_int,mark))
 #             t.append(i[:i.index(j)])
 
 
+
+def reverse_int(int_input):
+    r = str(int_input)
+    if r[0] == '-':
+        r = r[1:]
+        return int(r[::-1]) * -1
+    return int(r[::-1])
+
+print(reverse_int(-1234))
+print(type(reverse_int(1234)))
 
