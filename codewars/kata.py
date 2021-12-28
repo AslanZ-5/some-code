@@ -77,13 +77,7 @@ def solution(string,markers):
         else:
             t.append(i)
     return '\n'.join(map(str.rstrip,t))
-# print(solution(str_int,mark))
 
-# print(list(ls[1]).index('#'))
-# for i in ls:
-#     for j in mark:
-#         if i.index(j):
-#             t.append(i[:i.index(j)])
 
 
 
@@ -96,4 +90,13 @@ def reverse_int(int_input):
 
 print(reverse_int(-1234))
 print(type(reverse_int(1234)))
+
+
+def arg_words_len(w):
+    for p in '!?,.:;':
+        w = w.replace(p,'')
+    words = w.split()
+    avr = sum(len(word) for word in words) / len(words)
+    return round(avr,2)
+print(arg_words_len("Hi all, my name is Tom...I am originally from Australia."))
 
