@@ -40,8 +40,9 @@ def closest_num(arr, tar):
 # print(closest_num([2, 6, 7, 8, 8, 9], 4))
 import timeit
 
-
 start = timeit.timeit()
+
+
 def peak(arr):
     pos = []
     peaks = []
@@ -51,18 +52,21 @@ def peak(arr):
                 pos.append(i)
                 peaks.append(arr[i])
     return {'pos': pos, 'peaks': peaks}
+
+
 # print(peak([3,2,3,6,4,1,2,3,2,1,2,2,2,1]))
 
 stop = timeit.timeit()
 # print('time: ',start - stop)
 
 
-
 str_int = "apples, pears # and bananas\ngrapes\nbananas !apples"
 # str_int = "a #b\nc\nd $e f g"
 mark = ["#", "!"]
+
+
 # mark = ["#", "$"]
-def solution(string,markers):
+def solution(string, markers):
     t = []
     ls = string.split('\n')
 
@@ -76,9 +80,7 @@ def solution(string,markers):
             t.append(i[:min(inx)])
         else:
             t.append(i)
-    return '\n'.join(map(str.rstrip,t))
-
-
+    return '\n'.join(map(str.rstrip, t))
 
 
 def reverse_int(int_input):
@@ -88,15 +90,17 @@ def reverse_int(int_input):
         return int(r[::-1]) * -1
     return int(r[::-1])
 
+
 print(reverse_int(-1234))
 print(type(reverse_int(1234)))
 
 
 def arg_words_len(w):
     for p in '!?,.:;':
-        w = w.replace(p,'')
+        w = w.replace(p, '')
     words = w.split()
     avr = sum(len(word) for word in words) / len(words)
-    return round(avr,2)
-print(arg_words_len("Hi all, my name is Tom...I am originally from Australia."))
+    return round(avr, 2)
 
+
+print(arg_words_len("Hi all, my name is Tom...I am originally from Australia."))
