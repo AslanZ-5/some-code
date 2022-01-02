@@ -91,10 +91,6 @@ def reverse_int(int_input):
     return int(r[::-1])
 
 
-print(reverse_int(-1234))
-print(type(reverse_int(1234)))
-
-
 def arg_words_len(w):
     for p in '!?,.:;':
         w = w.replace(p, '')
@@ -103,4 +99,26 @@ def arg_words_len(w):
     return round(avr, 2)
 
 
-print(arg_words_len("Hi all, my name is Tom...I am originally from Australia."))
+
+
+
+def find_the_strongest_apes(_list):
+    dc = {"Gorilla": None, "Gibbon": None, "Orangutan": None, "Chimpanzee": None}
+    a = [(i['name'], (i['weight'] + i['height']), i['type']) for i in _list]
+    a = sorted(a, key=lambda x: x[0].lower())
+    a = sorted(a, key=lambda x: x[1], reverse=True)
+    for i in a:
+        if dc[i[2]] is None:
+            dc[i[2]] = i[0]
+
+    return dc
+
+list = ( [{"name": "aba", "weight": 100, "height": 120, "type": "Gorilla"},
+             {"name": "abb", "weight": 100, "height": 120.01, "type": "Gorilla"},
+             {"name": "abc", "weight": 100, "height": 100, "type": "Orangutan"},
+             {"name": "abd", "weight": 100.01, "height": 100, "type": "Orangutan"}])
+
+
+
+
+
