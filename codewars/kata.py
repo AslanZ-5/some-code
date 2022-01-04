@@ -99,9 +99,6 @@ def arg_words_len(w):
     return round(avr, 2)
 
 
-
-
-
 def find_the_strongest_apes(_list):
     dc = {"Gorilla": None, "Gibbon": None, "Orangutan": None, "Chimpanzee": None}
     a = [(i['name'], (i['weight'] + i['height']), i['type']) for i in _list]
@@ -113,12 +110,17 @@ def find_the_strongest_apes(_list):
 
     return dc
 
-list = ( [{"name": "aba", "weight": 100, "height": 120, "type": "Gorilla"},
-             {"name": "abb", "weight": 100, "height": 120.01, "type": "Gorilla"},
-             {"name": "abc", "weight": 100, "height": 100, "type": "Orangutan"},
-             {"name": "abd", "weight": 100.01, "height": 100, "type": "Orangutan"}])
 
+list = ([{"name": "aba", "weight": 100, "height": 120, "type": "Gorilla"},
+         {"name": "abb", "weight": 100, "height": 120.01, "type": "Gorilla"},
+         {"name": "abc", "weight": 100, "height": 100, "type": "Orangutan"},
+         {"name": "abd", "weight": 100.01, "height": 100, "type": "Orangutan"}])
 
+num = 1234567
+remainder1 = num % 13
+remainder2 = None
+num = str(num)[::-1]
+t = [1, 10, 9, 12, 3, 4]
 
-
-
+for i in num:
+    inx = 0
