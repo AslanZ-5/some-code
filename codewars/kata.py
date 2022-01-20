@@ -1,3 +1,4 @@
+import itertools
 def perimeter_sequence(a, n):
     # your code here
     return (a * n + (a * n)) * 2
@@ -111,7 +112,7 @@ def find_the_strongest_apes(_list):
     return dc
 
 
-list = ([{"name": "aba", "weight": 100, "height": 120, "type": "Gorilla"},
+list1 = ([{"name": "aba", "weight": 100, "height": 120, "type": "Gorilla"},
          {"name": "abb", "weight": 100, "height": 120.01, "type": "Gorilla"},
          {"name": "abc", "weight": 100, "height": 100, "type": "Orangutan"},
          {"name": "abd", "weight": 100.01, "height": 100, "type": "Orangutan"}])
@@ -122,5 +123,13 @@ remainder2 = None
 num = str(num)[::-1]
 t = [1, 10, 9, 12, 3, 4]
 
-for i in num:
-    inx = 0
+
+a = "a lot of words for a single line"
+c = 0
+for i in range(len(a)):
+    if c == 10 -1:
+        a = a[:i] +'-' + a[i:]
+        c = 0
+    c += 1
+print(a)
+
