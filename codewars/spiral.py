@@ -10,6 +10,3 @@ for i in range(n):
             a[i][j] = 1
 
 
-
-for i in a:
-    print(i,end='\n')
